@@ -1,11 +1,3 @@
-// Valtteri Tarvus
-// Advent of Code 2017 http://adventofcode.com/2017
-// Challenge day 2 - Corruptation Checksum
-
-// Input for this software is multiple lines of integers delimited by tab
-// Phase 1 calculates the difference between min and max value of each row and sum the result of all rows
-// Phase 2 calculates the division of the only pair on a row that dividies evenly, then sums the results of all rows
-
 module Day02
   let phase1 (input:seq<seq<int>>)=
     input
