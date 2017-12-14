@@ -1,11 +1,3 @@
-// Valtteri Tarvus
-// Advent of Code 2017 http://adventofcode.com/2017
-// Challenge day 3 - 
-
-// Input for this software is 
-// Phase 1 calculates 
-// Phase 2 calculates 
-
 module Day03
   
   let phase1 input =
