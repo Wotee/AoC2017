@@ -1,19 +1,17 @@
 module Day04
-  let phase1 (input:array<string>) : int=
-    Array.fold (fun acc (x : string) ->
+  let func1 input = (if Array.distinct input = input then 1 else 0)
+
+  let func2 input =
+    let parsed = Array.map (fun (z:string) -> z |> Seq.sort |> System.String.Concat) input |> Array.distinct
+    (if Array.length input = Array.length parsed then 1 else 0)
+
+  let phase (input:array<string>) func=
+    Array.fold (fun acc (x:string) ->
       let y = x.Split ' '
-      acc + (if Array.distinct y = y then 1 else 0)
+      acc + func y
     ) 0 input
-
-
-  let phase2 (input:array<string>)=
-    Array.fold (fun acc (x : string) ->
-      let y = x.Split ' '
-      let Y = Array.map (fun (z:string) -> z |> Seq.sort |> System.String.Concat) y |> Array.distinct
-      acc + (if Array.length y = Array.length Y then 1 else 0)
-    ) 0 input
-
+  
   let run() =
     let input = System.IO.File.ReadAllLines("..\Day 04\input.txt")
-    printfn "Phase 1: %i" (phase1 input)
-    printfn "Phase 2: %i" (phase2 input)
+    printfn "Phase 1: %i" (phase input func1)
+    printfn "Phase 2: %i" (phase input func2)
