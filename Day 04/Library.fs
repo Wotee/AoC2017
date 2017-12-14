@@ -1,9 +1,9 @@
 module Day04
-  let func1 input = (if Array.distinct input = input then 1 else 0)
+  let func1 input = if Array.distinct input = input then 1 else 0
 
   let func2 input =
     let parsed = Array.map (fun (z:string) -> z |> Seq.sort |> System.String.Concat) input |> Array.distinct
-    (if Array.length input = Array.length parsed then 1 else 0)
+    if Array.length input = Array.length parsed then 1 else 0
 
   let phase input func=
     Array.fold (fun acc (x:string) ->
