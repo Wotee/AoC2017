@@ -1,11 +1,3 @@
-// Valtteri Tarvus
-// Advent of Code 2017 http://adventofcode.com/2017
-// Challenge day 1 - Inverse Captcha
-
-// Input for this software is a string of numbers
-// Phase 1 calculates the sum of adjacent numbers that are equal
-// Phase 2 calculates the sum of numbers that are halfway across each other in the string
-
 module Day01
   let phase1 (input:string) : int =
      // Create pairwise tuples with first letter of the string added to the end to fake circularity
