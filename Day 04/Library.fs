@@ -1,11 +1,3 @@
-// Valtteri Tarvus
-// Advent of Code 2017 http://adventofcode.com/2017
-// Challenge day 4 - 
-
-// Input for this software is 
-// Phase 1 calculates 
-// Phase 2 calculates 
-
 module Day04
   let phase1 (input:array<string>) : int=
     Array.fold (fun acc (x : string) ->
